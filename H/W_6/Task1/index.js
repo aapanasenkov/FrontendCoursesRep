@@ -2,13 +2,13 @@ function displayLastNumberMoreThan100() {
     let lastPrmt;
     for (let i = 0; i < 10; i++) {
         lastPrmt = prompt('Введите число больше 100');
-        if (lastPrmt < 100) {
-            continue;
+        if (isNaN(+lastPrmt) || lastPrmt > 100) {
+            break;
         } else {
-            console.log(lastPrmt);
-            return;
+            continue
         }
     }
+    console.log(lastPrmt)
 }
 
 displayLastNumberMoreThan100();
